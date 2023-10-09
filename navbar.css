@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;/*remove scroll bar*/
+    min-height: 100vh;
+    background-color: #FFFCF7;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #FFFCF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.name {
+    font-family:"Grandstander", sans-serif;
+    font-size: 4rem;
+    color: #3B2822;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{
+    font-family:"Open Sans", sans-serif;
+    position: relative;
+    font-size: 18px;
+    color: #3B2822;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3B2822;
+    transition: .5s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+.sign-up-button:hover::before{
+    content: none;
+}
+
+.sign-up-button{
+    font-family:"Grandstander", sans-serif;
+    background-color: #EEBD59;
+    color: #3B2822;
+    text-decoration: none;
+    border: 0.2rem solid;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+/*    transition: transform .4s;*/
+}
