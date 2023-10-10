@@ -1,4 +1,6 @@
-        /* Style for the navigation bar */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+  
+       /* Style for the navigation bar */
         .navbar {
             background-color: #EEBD59;
             overflow: hidden;
@@ -18,14 +20,15 @@
 
         /* On hover, the links change color */
         .navbar a:hover {
-            background-color: #ddd;
-            color: #3B2822;
+            color: #ffffff;
+            background-color: #3B2822;
             
         }
 
         /* Style for the title */
         h1 {
             text-align: center;
+            color: #3B2822;
             font-size: 36px; /* Adjust the font size as needed */
             margin-top: 20px; /* Add some space between the title and the navigation bar */
             font-family:"Grandstander", sans-serif;
@@ -34,6 +37,7 @@
         /* Style for the sub-heading */
         h2 {
             text-align: center;
+            color: #3B2822;
             font-size: 24px; /* Adjust the font size as needed */
             margin-top: 20px; /* Add some space between the title and the navigation bar */
             font-family:"Grandstander", sans-serif;
@@ -45,6 +49,7 @@
             max-width: 700px;
             margin: 0 auto;
             padding: 0;
+            color: #3B2822;
         }
 
         .faq li {
@@ -68,6 +73,7 @@
             font-style: normal;
             font-weight: 700;
             font-stretch: 100%;
+            color: #3B2822;
         }
 
         .q:hover {
@@ -97,7 +103,7 @@
             padding: 0 1em 0 2em;
             transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
             font-family:"Open Sans", sans-serif;
-        
+            color: #3B2822;
             font-weight: 400;
         }
 
