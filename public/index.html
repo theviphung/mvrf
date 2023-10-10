@@ -2,75 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/68dce3c3d2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="hero.css">
+    
+
     <title>Home - MVRD Restaurant Finder</title>
-    <style>
-        /* Style for the navigation bar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        /* Style for the navigation bar links */
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* On hover, the links change color */
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* Style for the title */
-        h1 {
-            text-align: center;
-            font-size: 36px; /* Adjust the font size as needed */
-            margin-top: 20px; /* Add some space between the title and the navigation bar */
-        }
-
-        /* Style for the sub-heading */
-        h2 {
-            text-align: center;
-            font-size: 24px; /* Adjust the font size as needed */
-            margin-top: 20px; /* Add some space between the title and the navigation bar */
-        }
-
-        /* Style for the blurb */
-        p {
-            text-align: center;
-            font-size: 18px; /* Adjust the font size as needed */
-        }
-
-    </style>
 </head>
+ 
 <body>
+    <!-- Navigation Bar -->
+    <header class = "header">
+        <a href="index.html" class = "name">mvrf</a>
+        <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="search.html">FAQs</a>
+                <a href="about-us.html">About Us</a>
+                <a href="login.html" class="sign-up-button">Log In</a>  
+        </nav>
+    </header>
 
-<!-- Navigation Bar -->
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="search.html">Search</a>
-    <a href="login.html">Login</a>
-    <a href="about-us.html">About Us</a>
-    <a href="my-account.html">My Account</a>
-</div>
+    <section class ="hero">
+        <div class ="intro-grid">
+            <div class="hero-text">
+                <h1 class = "intro-line-one">Chow Down on Your Faves, Goodbye to Worries!</h1>
+                <h2 class="intro-line-two">Crafted for your </h2>
+                <h2 class = "intro-line-three">Dietary Preference </h2>
+                <h2 class="intro-line-t1">& </h2>
+                <h2 class="intro-line-t2">Food Allergies </h2>
+            </div>
+            <div class="hero-img">
+                <img src="home-img/food-frame.png" alt="food-image">
+            </div>
+        </div>
+    </section>
 
-<!-- Title -->
-<h1>MVRD Restaurant Finder</h1>
-
-<!-- Subheading-->
-<h2>Home</h2>
-
-<!-- Blurb -->
-<p>Find restaurants in Metro Vancouver that cater to your dietary needs!</p>
-
-
-<!-- Content of the page goes here -->
-
+    <section class="main-bar">
+        <div class="main-bar-grid">
+            <a href="login.html" class="log-in-button">Sign Up</a>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="search.html" class="search-button">Search Restaurant</a>
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>
