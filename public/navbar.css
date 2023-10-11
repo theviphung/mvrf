@@ -5,12 +5,11 @@
 
 body {
     overflow: hidden;/*remove scroll bar*/
-    min-height: 100vh;
     background-color: #FFFCF7;
 }
 
 .header{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,16 +27,18 @@ body {
     color: #3B2822;
     text-decoration: none;
     font-weight: 700;
+    margin-left: -0.67%;
 }
 
 .navbar a{
     font-family:"Open Sans", sans-serif;
     position: relative;
-    font-size: 18px;
+    font-size: 20px;
     color: #3B2822;
     font-weight: 500;
     text-decoration: none;
     margin-right: 40px;
+    flex-wrap: wrap;
 }
 
 .navbar a::before{
@@ -55,11 +56,11 @@ body {
     width: 100%;
 }
 
-.sign-up-button:hover::before{
+.log-in-button:hover::before{
     content: none;
 }
 
-.sign-up-button{
+.log-in-button{
     font-family:"Grandstander", sans-serif;
     background-color: #EEBD59;
     color: #3B2822;
@@ -68,5 +69,65 @@ body {
     font-weight: bold;
     padding: 10px 25px;
     border-radius: 30px;
-/*    transition: transform .4s;*/
+}
+
+.hamburger{
+    background-color: #EEBD59;
+    color: #3B2822;
+    border-radius: 5px;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    float: right;
+    margin-left: 85%;
+}
+.hamburger:focus{
+    outline: none;
+}
+
+/*Reponsive*/
+@media (max-width: 1810px) {
+    .navbar a{
+        font-size: 19.5pxthe;
+    }
+    .name{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 1446px){
+    .navbar a{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 3.5rem;
+    }   
+}
+
+@media  (max-width: 1345px){
+    .navbar a{
+        font-size: 17px;
+    }
+    .name{
+        font-size: 3.3rem;
+    }  
+}
+
+@media (max-width: 1044px){
+    .navbar a{
+        font-size: 16px;
+    }
+    .name{
+        font-size: 3.1rem;
+    } 
+}
+
+/*Responsive hamburger Menu*/
+@media screen and (max-width: 838px){
+    .navbar a{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
 }
