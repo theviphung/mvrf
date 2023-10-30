@@ -26,3 +26,52 @@ body{
     position: relative;
     text-align: left;
 }
+
+
+/*Grid for Sign Up and Search Restaurant*/
+.main-bar-grid{
+    display: grid;
+    width: 45%;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -22%;
+    margin-left: 50px;
+}
+.main-bar{
+    position: relative;
+    text-align: center;
+    padding-top: 5.5%;
+}
+
+.sign-up-button{
+    font-family:"Open Sans", sans-serif;
+    font-size: 1.5rem;
+    background-color: #EEBD59;
+    color: #3B2822;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.2rem solid;
+    
+    padding: 10px;
+    border-radius: 30px;
+    width: 55%;
+}
+
+.search{
+    font-family:"Open Sans", sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #3B2822;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.2rem solid;
+    
+    padding: 10px;
+    border-radius: 30px;
+    margin-left: -40%;
+    margin-right: 8%;
+}
+.search-button{
+    background-color: white;
+    color: #3B2822;
+    text-decoration: none;
+}
