@@ -23,17 +23,44 @@ body{
 }
 
 .hero-text{
-    position: relative;
-    text-align: left;
+    position: static;
+    margin-top: 4%;
 }
 
+.intro-line-one{
+    font-family: "Grandstander", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #EEBD59;;
+}
+
+.intro-line-two{
+    font-family:"Grandstander", sans-serif;
+    font-size: 2.7rem;
+    color: #3B2822;
+    text-decoration: none;
+    padding-top: 20px;
+    text-align: left;
+    margin-left: 3.5rem;
+}
+.intro-line-three, .intro-line-four{
+    font-family:"Grandstander", sans-serif;
+    font-size: 4.2rem;
+    color: #3B2822;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 3.5rem;
+}
 
 /*Grid for Sign Up and Search Restaurant*/
 .main-bar-grid{
     display: grid;
     width: 45%;
     grid-template-columns: 1fr 1fr;
-    margin-top: -22%;
+    margin-top: -17%;
     margin-left: 50px;
 }
 .main-bar{
