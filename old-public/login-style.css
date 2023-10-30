@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+
+/* Title */
+h1 {
+    font-family: 'Grandstander', sans-serif;
+    text-align: center;
+    font-size: 36px; 
+    margin-top: 20px; 
+}
+
+
+/* Subheading */
+h2 {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Blurb */
+p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Form container */
+.form-container {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 30px;
+    background-color: #EEBD59;
+    border-radius: 20px;
+}
+
+/* Form input fields and buttons */
+.form-input {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-info {
+    display: none;
+    font-size: 12px; 
+    margin-top: 5px;
+    color: #555; 
+}
+
+.form-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #555;
+}
+
+/* "Create an account" link */
+.create-account-link {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    text-decoration: underline;
+}
+
+.create-account-link:hover {
+    color: #8c6d64 !important;
+}

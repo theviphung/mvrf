@@ -1,0 +1,27 @@
+ <%= stylesheet_link_tag('navbar')%> 
+
+<nav class="navbar">
+    <h1><a href="/" class = "logo">mvrf</a></h1>
+    <a class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class = "nav-items">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/login" class="log-in-button">Log In</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0]
+    const navbarItems = document.getElementsByClassName('nav-items')[0]
+
+    hamburgerMenu.addEventListener('click', () => {
+    navbarItems.classList.toggle('active')
+    })
+</script>
