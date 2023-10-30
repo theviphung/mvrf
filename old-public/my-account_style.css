@@ -1,13 +1,13 @@
   
   @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
   
-  /* Style for the navigation bar */
+  /* Style for the navigation bar
    .navbar {
     background-color: #EEBD59;
     overflow: hidden;
-}
+} */
 
-/* Style for the navigation bar links */
+/* Style for the navigation bar links
 .navbar a {
     font-family: 'Open Sans', sans-serif;
     float: left;
@@ -16,13 +16,13 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
+} */
 
-/* On hover, the links change color */
+/* On hover, the links change color
 .navbar a:hover {
     background-color: #3B2822;
     color: white;
-}
+} */
 
 /* Style for the title */
 h1 {

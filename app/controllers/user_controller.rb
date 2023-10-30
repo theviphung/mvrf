@@ -5,6 +5,6 @@ class UserController < ApplicationController
   def myaccount
   end
 
-  def signup
+  def sign_up
   end
 end

@@ -2,7 +2,7 @@ class GeneralController < ApplicationController
   def index
   end
 
-  def about
+  def about_us
   end
 
   def faqs

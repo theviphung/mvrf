@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+
+body{
+    overflow: hidden;
+    background-color: #FFFCF7;;
+}
+.hero{
+    display: relatives;
+}
+.intro-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.hero-img img{
+    position: relative;
+    max-width: 88%;
+    height: 90%;
+    left: 15%;
+    bottom: 8%;
+    top: 0;
+}
+
+.hero-text{
+    position: relative;
+    text-align: left;
+}

@@ -1,28 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
-
-/* Navigation bar
- .navbar {
-    background-color: #EEBD59;
-    overflow: hidden;
-} */
-
-/* Navigation bar links
-.navbar a {
-    font-family: 'Open Sans', sans-serif;
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-} */
-
-/* On hover, the links change color
-.navbar a:hover {
-    background-color: #3B2822;
-    color: white;
-} */
-
 /* Title */
 h1 {
     font-family: 'Grandstander', sans-serif;
