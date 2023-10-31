@@ -1,22 +1,26 @@
+<%= stylesheet_link_tag('hero')%> 
+
 <h1>Contact Us</h1>
+
+<p class="contact-blurb">We strive to respond to inquiries within 2-3 business days.<p>
 
 <%= form_for :contact, url: contacts_path do |f| %>
 <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name%>
+    <%= f.text_field :name, class: "text-field"%>
 </p>
 
 <p>
     <%= f.label :email%><br>
-    <%= f.email_field :email%>
+    <%= f.email_field :email, class: "text-field"%>
 </p>
 
 <p>
     <%= f.label :message %><br>
-    <%= f.text_area :message%>
+    <%= f.text_area :message, class: "body-field"%>
 </p>
 
 <p>
-    <%= f.submit "Send" %>
+    <%= f.submit "Send", class: "send-button" %>
 </p>
 <% end %>

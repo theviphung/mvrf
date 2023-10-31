@@ -91,3 +91,15 @@
             padding: 1em 1em 1em 3em;
             transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
         }
+
+        
+        .contact {
+            text-align: center;
+            padding: 20px
+        }
+
+        .contact a {
+            font-family: "Grandstander", sans-serif;
+            font-size: 24px;
+            color: inherit;
+        }
