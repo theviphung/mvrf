@@ -31,6 +31,8 @@ body{
     font-family: "Grandstander", sans-serif;
     font-size: 1.5rem;
     letter-spacing: 2px;
+    text-align: left;
+    margin-left: 3.5rem;
 
     text-decoration-line: underline;
     text-decoration-style: wavy;
@@ -101,4 +103,130 @@ body{
     background-color: white;
     color: #3B2822;
     text-decoration: none;
+}
+
+@media (max-width: 1418px)
+{
+    .intro-line-one{
+        font-size: 1.3rem;
+    }
+    .intro-line-two{
+        font-size: 2rem;
+    }
+    .intro-line-three,.intro-line-four{
+        font-size: 4rem;
+    }
+    .sign-up-button, .search{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1325px)
+{
+    .intro-line-two{
+        font-size: 1.5rem;
+    }
+    .intro-line-three{
+        font-size: 3.7rem;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .intro-line-four{
+        font-size: 3.7rem;
+    }
+    .hero-img img{
+        max-width: 85%;
+        height: 85%;
+        padding-top: 3.5%;
+    }
+    .main-bar-grid{
+        padding-top: 2.55%;
+    }
+}
+
+@media (max-width: 1275px)
+{
+    .intro-grid{
+        column-gap: 2rem;
+    }
+    .intro-line-one{
+        font-size: 1.1rem;
+    }
+    .intro-line-two{
+        margin-top: 40px;
+    }
+    .search,.sign-up-button{
+        font-size: 1rem;
+    }
+    .search{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1220px)
+{
+    .intro-line-three, .intro-line-four{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 1165px){
+    .intro-line-three, .intro-line-four{
+        font-size: 3.2rem;
+    }
+    .intro-line-one{
+        padding-top: 0;
+    }
+    .main-bar-grid{
+        padding-top: 50px;
+    }
+}
+@media(max-width: 1115px){
+    .intro-grid{
+        column-gap: 0rem;
+    }
+    .intro-line-one{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1045px){
+    .intro-line-three{
+        font-size: 3rem;
+    }
+    .intro-line-two{
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 1010px){
+    .intro-line-one{
+        font-size: 0.9rem;
+    }
+    .intro-line-three,.intro-line-four{
+        font-size: 2.7rem;
+    }
+}
+@media (max-width: 940px){
+    .intro-line-one{
+        font-size: 0.7rem;
+    }
+    .intro-line-three, .intro-line-four{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .hero-img img{
+        grid-area: hero-img;
+    }
+    .hero-text{
+        grid-area: hero-text;
+    }
+    .intro-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'hero-img'
+        'hero-text';
+    }
 }
