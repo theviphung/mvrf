@@ -48,7 +48,7 @@ development:
   #   debug5, debug4, debug3, debug2, debug1,
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
-  #min_messages: notice
+  min_messages: notice
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -57,10 +57,7 @@ test:
   <<: *default
   database: mvrf_test
   username: mvrf
-  password: password
-  host: localhost
-  port: 5432
-  schema_search_path: myapp,sharedapp,public
+  password: 
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -86,7 +83,4 @@ production:
   <<: *default
   database: mvrf_production
   username: mvrf
-  password: password
-  port: 5432
-  schema_search_path: myapp,sharedapp,public
-  min_messages: notice
+  password: <%= ENV["MVRF_DATABASE_PASSWORD"] %>
