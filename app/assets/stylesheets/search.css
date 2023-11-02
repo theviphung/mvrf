@@ -3,6 +3,53 @@
 .sidebar {
     /* make this scrollable vertically */
     background-color: #EEBD59;
-    width: 400px;
-    height: 1000px;
+    width: 25%;
+    height:fit-content;
+    max-height: 750px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+.results {
+    font-size: 20px;
+}
+
+.search-options-bar {
+    background-color: green;
+    width: 100%;
+    float: right;
+}
+
+.search-options-bar input[type=text] {
+    float: left;
+    padding: 12px;
+    width: 75%;
+    font-size: 20px;
+}
+
+.filters-button {
+    background-color: #EEBD59;
+    width: 150%;
+    color: black;
+    padding: 14px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.filters-button:hover {
+    background-color: #b98825;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.filters-content {
+    display: none;
+    position: absolute;
+}
+
+.show {display:block}
