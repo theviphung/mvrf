@@ -1,0 +1,47 @@
+  
+  @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+  
+
+/* Style for the title */
+h1 {
+    text-align: center;
+    font-size: 36px; /* Adjust the font size as needed */
+    font-family: 'Grandstander', sans-serif;
+    margin-top: 20px; /* Add some space between the title and the navigation bar */
+}
+
+/* Style for the sub-heading */
+h2 {
+    text-align: center;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px; /* Add some space between the title and the navigation bar */
+
+}
+
+/* Style for the blurb */
+p {
+    text-align: center;
+    font-size: 16px; /* Adjust the font size as needed */
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline
+}
+
+/* account information container */
+.accinfo_cont {
+    background-color: #F9E9C8;
+    max-width: 40em;
+    padding: 1em 3em;
+    margin: 2em auto;
+    border-radius: 20px;
+    
+    
+}
+
+.accinfo_cont p {
+    text-align: left;
+}
+
+.accinfo_cont:hover {
+    background-color: #EEBD59;
+}
