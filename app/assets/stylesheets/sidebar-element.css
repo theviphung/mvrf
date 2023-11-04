@@ -1,0 +1,62 @@
+.sidebar-element {
+    height: 120px;
+    width: 100%;
+    background-color: #EEBD59;
+    border: none;
+}
+
+.sidebar-element:hover {
+    background-color: #b98825;
+}
+
+.restaurant-name {
+    text-decoration: none;
+    text-align: left;
+    margin: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.address-ratings {
+    display: inline-block;
+    text-align:left;
+    height: 20px;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.address {
+    display: inline-block;
+    font-size: 12px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.ratings {
+    display:inline-block;
+    font-size: 10px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.tags {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.list-item {
+    float: left;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.cuisine {
+    text-decoration: none;
+    font-size: 12px;
+}
