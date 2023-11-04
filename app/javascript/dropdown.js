@@ -9,7 +9,7 @@ function OpenSortBy() {
 
 window.onclick = function(event) {
     if (!event.target.matches(".filters-button")) {
-        var dropdowns = document.getElementByClassName("filters-content");
+        var dropdowns = document.getElementsByClassName("filters-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
@@ -22,7 +22,7 @@ window.onclick = function(event) {
 
 window.onclick = function(event) {
     if (!event.target.matches(".sorting-button")) {
-        var dropdowns = document.getElementByClassName("sorting-methods");
+        var dropdowns = document.getElementsByClassName("sorting-methods");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];

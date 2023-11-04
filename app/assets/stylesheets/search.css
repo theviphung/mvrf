@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
 
+.main-content {
+    height: 750px;
+    width: 95%;
+    margin: auto;
+}
+
 .sidebar {
     /* make this scrollable vertically */
     background-color: #EEBD59;
     width: 25%;
     height:fit-content;
     max-height: 750px;
-    float: left;
     overflow-x: hidden;
     overflow-y: auto;
+    float: left;
 }
 
 .results {
@@ -16,16 +22,15 @@
 }
 
 .search-options-bar {
-    background-color: green;
-    width: 75%;
-    float: center;
+    width: 95%;
+    margin: auto;
 }
 
 .search-options-bar input[type=text] {
-    float: left;
     padding: 12px;
-    width: 75%;
+    width: 87.5%;
     font-size: 20px;
+    margin: 0px;
 }
 
 .filters-button {
@@ -35,18 +40,18 @@
     padding: 14px;
     font-size: 20px;
     border: none;
-    margin: 0px;
+    margin: auto;
     cursor: pointer;
 }
 
 .sorting-button {
     background-color: #EEBD59;
-    width: 100%;
+    width: 105%;
     color: black;
     padding: 14px;
     font-size: 20px;
     border: none;
-    margin: 0px;
+    margin: auto;
     cursor: pointer;
 }
 
@@ -61,19 +66,31 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    margin: 0px;
+    margin: 1px;
 }
 
 .filters-content {
+    background-color: white;
     display: none;
     position: absolute;
     z-index: 1;
 }
 
 .sorting-methods {
+    background-color: white;
     display: none;
     position: absolute;
     z-index: 1;
 }
 
 .show {display:block}
+
+.large-view {
+    background-color: green;
+    width: 75%;
+    float: right;
+    height: fit-content;
+    max-height: 750px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
