@@ -86,10 +86,9 @@
 .show {display:block}
 
 .large-view {
-    background-color: green;
     width: 75%;
     float: right;
-    height: fit-content;
+    height: 750px;
     max-height: 750px;
     overflow-x: hidden;
     overflow-y: auto;
