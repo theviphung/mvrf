@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag('login-style')%> 
+
+<!-- Title -->
+<h1>Welcome Back</h1>
+
+<!-- Blurb -->
+<p>Log in to access your saved dietary preferences and favourite restaurants!</p>
+
+
+<div class="form-container">
+    <h2>Login</h2>
+    <%= form_tag '/login' do %>
+        <%= text_field_tag :username, nil, placeholder:"Username", class:"form-input"%><br>
+        <%= password_field_tag :password, nil, placeholder:"Password", class:"form-input"%><br>
+        <%=submit_tag "Log In", class: "form-button"%>
+    <% end %>
+    <div class="create-account-link">
+        <a href="sign-up" class="create-account-link">Not registered? Create an account</a>
+    </div>
+</div>
+
+
+</body>
+</html>
+
