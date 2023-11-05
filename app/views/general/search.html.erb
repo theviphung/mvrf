@@ -1,4 +1,5 @@
 <%= javascript_include_tag "dropdown.js", defer: true %>
+<%= javascript_include_tag "switch-views.js", defer: true %>
 
 <div class="search-options-bar">
     <input type="text" placeholder="Search...">
@@ -32,11 +33,12 @@
 
     <div class="large-view">
         <!--- these two divs should completely overlap, and use javascript to show or hide one depending on whether a restaurant is selected or not -->
-        <div class="restaurant-view">
+
+        <div id="restaurant" class="restaurant-view">
             <!--- use this one for the restaurant page -->
         </div>
 
-        <div class="map-view">
+        <div id="map" class="map-view show">
             <!--- use this one for the map view page -->
         </div>
     </div>

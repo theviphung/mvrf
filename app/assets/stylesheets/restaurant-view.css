@@ -1,0 +1,7 @@
+.restaurant-view {
+    display: none;
+    background-color: blue;
+    height: 750px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
