@@ -1,4 +1,8 @@
-<button class="sidebar-element">
+<%= javascript_include_tag "switch-views.js", defer: true %>
+
+<!--- likely won't be user, but keeping here for now just in case -->
+
+<button onclick="SwitchRestaurantView()" class="sidebar-element">
     <p class="restaurant-name">Test Name</p>
 
     <div class="address-ratings">
