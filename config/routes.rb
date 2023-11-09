@@ -8,9 +8,16 @@ Rails.application.routes.draw do
     get "index", to: "general#index"
 
     get "login", to: "sessions#login"
-    get "my-account", to: "user#myaccount"
+    get "my-account", to: "users#myaccount"
     get "sign-up", to: "users#new"
     post "sign-up", to: "users#create"
+    get "users/success", to: "users#success", as: "user_success"
+
+    get "users/failure", to: "users#failure", as: "user_failure"
+
+    get "sessions/success", to: "sessions#success", as: "session_success"
+
+    get "sessions/error", to: "sessions#error", as: "session_error"
 
     resources :contacts
     get "new-contact", to: "contacts#new"
@@ -19,7 +26,7 @@ Rails.application.routes.draw do
     get '/login', to: 'sessions#login'
     post '/login', to: 'sessions#create'
     post '/logout' , to: 'sessions#destroy'
-    get '/logout', to: 'sessions#destroy'
+    get '/logout', to: 'sessions#logout'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

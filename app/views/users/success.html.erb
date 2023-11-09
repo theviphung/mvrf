@@ -1,0 +1,13 @@
+<!-- Successful sign up -->
+
+
+<% @current_user = User.find_by_id(session[:user_id]) %>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Sign up successful!</h1>
+<h2>Welcome, <%= @current_user.username %>!</h2>
+</body>
+</html>

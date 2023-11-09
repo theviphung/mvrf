@@ -1,4 +1,6 @@
-<%= stylesheet_link_tag('my-account_style')%> 
+<% stylesheet_link_tag('my-account_style')%>  
+
+<% @current_user = User.find_by_id(session[:user_id]) %>
 
 <!-- Title -->
 <h1>mvrf</h1>
@@ -14,7 +16,7 @@
 <section class="accinfo_cont">
     <h2>My Information</h2>
     <p>Email: </p>
-    <p>Username: </p>
+    <p>Username: <%= @current_user.username %></p>
     <p>Change Password</p>
 
 </section>
@@ -28,6 +30,14 @@
     <h2>My Restaurants</h2>
     <p>Own a Restaurant?</p> 
 </section>
+
+<div class="form-container">
+    <%=form_tag '/logout' do %>
+    <%=submit_tag "Log Out", class: "form-button"%>
+    <% end %>
+</div>
+
+
 
 </body>
 </html>

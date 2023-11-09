@@ -1,5 +1,7 @@
  <%= stylesheet_link_tag('navbar')%> 
 
+ <% @current_user = User.find_by_id(session[:user_id]) %>
+
 <nav class="navbar">
     <h1><a href="/" class = "logo">mvrf</a></h1>
     <a class="hamburger-menu">
@@ -13,7 +15,11 @@
             <li><a href="/search">Search</li>
             <li><a href="/faqs">FAQs</a></li>
             <li><a href="/about-us">About Us</a></li>
-            <li><a href="/login" class="log-in-button">Log In</a></li>
+            <% if @current_user %>
+              <li><a href="/my-account" class="log-in-button"><%= "My Account" %></a></li>
+            <% else %>
+              <li><a href="/login" class="log-in-button">Log In</a></li>
+            <% end %>
         </ul>
     </div>
 </nav>
