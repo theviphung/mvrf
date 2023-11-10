@@ -1,7 +1,35 @@
 .restaurant-view {
     display: none;
-    background-color: blue;
     height: 750px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.image-gallery {
+    border: 2px solid;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.info-bar {
+    width: 1000px;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-div {
+    margin: auto;
+    width: 1000px;
+    height: fit-content;
+    padding-bottom: 25px;
+}
+
+.view-name {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 25px;
 }

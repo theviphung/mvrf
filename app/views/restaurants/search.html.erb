@@ -53,10 +53,28 @@
 
     <div class="large-view">
         <!--- these two divs should completely overlap, and use javascript to show or hide one depending on whether a restaurant is selected or not -->
+        <% @restaurants.each do |restaurant| %>
+            <div id="restaurant" class="restaurant-view">
+                <!--- use this one for the restaurant page -->
+                <h1 class="view-name"><%= restaurant.name %></h1>
 
-        <div id="restaurant" class="restaurant-view">
-            <!--- use this one for the restaurant page -->
-        </div>
+                <div class="image-gallery">
+                    <p>Images go Here</p>
+                </div>
+
+                <div class="info-bar">
+                    <p class="view-address"><%= restaurant.address %></p>
+                    <p class="view-rating">Rating: <%= restaurant.rating %></p>
+                    <P class="view-owner">Owner: <%= restaurant.owner %></p>
+                    <p class="view-cuisine">Cuisine: <%= restaurant.cuisine %></p><br>
+                    <p class="view-hours">Hours: <%= restaurant.hours %></p>
+                </div>
+
+                <div class="description-div">
+                    <P class="description"><%= restaurant.description %></p>
+                </div>
+            </div>
+        <% end %>
 
         <div id="map" class="map-view show">
             <!--- use this one for the map view page -->
