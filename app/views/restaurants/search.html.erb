@@ -29,7 +29,7 @@
 
         <!--- somehow use embedded ruby for loop to display returned restaurants using the sidebar-element partial-->
         <% @restaurants.each do |restaurant| %>
-            <button onclick="SwitchRestaurantView()" class="sidebar-element">
+            <button onclick="SwitchRestaurantView(<%= restaurant.id %>)" class="sidebar-element">
                 <p class="restaurant-name"><%= restaurant.name %></p>
 
                 <div class="address-ratings">
@@ -54,7 +54,7 @@
     <div class="large-view">
         <!--- these two divs should completely overlap, and use javascript to show or hide one depending on whether a restaurant is selected or not -->
         <% @restaurants.each do |restaurant| %>
-            <div class="restaurant-view">
+            <div id="<%= restaurant.id %>"class="restaurant-view">
                 <!--- use this one for the restaurant page -->
                 <h1 class="view-name"><%= restaurant.name %></h1>
 
