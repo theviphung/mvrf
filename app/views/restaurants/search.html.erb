@@ -29,7 +29,24 @@
 
         <!--- somehow use embedded ruby for loop to display returned restaurants using the sidebar-element partial-->
         <% @restaurants.each do |restaurant| %>
-            <%= render partial: "/shared/sidebar-element"%>
+            <button onclick="SwitchRestaurantView()" class="sidebar-element">
+                <p class="restaurant-name"><%= restaurant.name %></p>
+
+                <div class="address-ratings">
+                    <p class = "address"><%= restaurant.address %></p>
+                    <p class = "ratings"> <%= restaurant.rating%> </p>
+                </div>
+
+                <div class="tags-cuisine">
+                    <ul class="tags">
+                        <li class="list-item">peanut free</li>
+                        <li class="list-item">, </li>
+                        <li class="list-item">vegan</li>
+                    </ul>
+
+                    <p class="cuisine">Cuisine: <%= restaurant.cuisine%></p>
+                </div>
+            </button>
         <% end %>
         
     </div>
