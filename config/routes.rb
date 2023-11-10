@@ -24,19 +24,28 @@ Rails.application.routes.draw do
 
     resources :contacts
     get "new-contact", to: "contacts#new"
-  
+
     resources :users
     get '/login', to: 'sessions#login'
     post '/login', to: 'sessions#create'
     post '/logout' , to: 'sessions#destroy'
     get '/logout', to: 'sessions#logout'
 
+
+    get 'admins/new'
+    get 'admins/create'
+    get 'admins/destroy'
+    get 'dashboards/index', to: 'dashboards#index', as: "admin_dashboard"
+
+    get '/admin-login', to: 'admins#new'
+    post '/admin-login', to: 'admins#create'
+    get '/admin-logout', to: 'admins#destroy'
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
   # root "posts#index"
-  
+
 
 end

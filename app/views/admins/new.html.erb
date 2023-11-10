@@ -1,0 +1,16 @@
+<h1>Site Administrator</h1>
+
+ <%= form_tag '/admin-login' do %>
+ <p>
+      <%= label_tag 'Username'%>
+      <%= text_field_tag :username, params[:username] %>
+      <br>
+</p>
+<p>
+      <%= label_tag 'Password'%>
+      <%= password_field_tag :password %></p> 
+</p>
+<p>
+      <%= submit_tag "Log In" %>
+</p>       
+<% end %>
