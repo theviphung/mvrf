@@ -28,7 +28,10 @@
         <h2 class="results">Results</h2>
 
         <!--- somehow use embedded ruby for loop to display returned restaurants using the sidebar-element partial-->
-        <%= render partial: "/shared/sidebar-element"%>
+        <% @restaurants.each do |restaurant| %>
+            <%= render partial: "/shared/sidebar-element"%>
+        <% end %>
+        
     </div>
 
     <div class="large-view">

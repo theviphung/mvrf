@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
     get "about-us", to: "general#about-us"
     get "faqs", to: "general#faqs"
-    get "search", to: "general#search"
+    get "search", to: "restaurants#search"
     get "index", to: "general#index"
 
     get "login", to: "sessions#login"
@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     get "sessions/success", to: "sessions#success", as: "session_success"
 
     get "sessions/error", to: "sessions#error", as: "session_error"
+
+    resources :restaurants
+    get "restaurants/:id", to: "restaurants#show"
 
     resources :contacts
     get "new-contact", to: "contacts#new"
