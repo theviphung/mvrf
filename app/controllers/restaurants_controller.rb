@@ -35,7 +35,12 @@ class RestaurantsController < ApplicationController
         end
     end
 
+    def destroy
+        @restaurant = Restaurant.find(params[:id])
+        @restaurant.destroy
 
+        redirect_to search_path, status: :see_other
+    end
 
     private
         def restaurant_params
