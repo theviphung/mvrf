@@ -13,4 +13,6 @@ Some information about our web app's configuration:
 
 * Server and client in use: PostgreSQL
 
-* Current deployment: On local host
+* Current deployment: On local host & on Render.com
+
+* Additional gems: Bcrypt, Geocoder, Mapkick-RB
