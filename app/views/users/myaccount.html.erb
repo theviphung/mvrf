@@ -2,33 +2,54 @@
 
 <% @current_user = User.find_by_id(session[:user_id]) %>
 
-<!-- Title -->
-<h1>mvrf</h1>
-
 <h2>My Account</h2>
 
-<!-- Blurb -->
-<p>Configure account settings and access role-specific functions.</p>
-
-
-<!-- Content of the page goes here -->
+<p>Configure account details and choose your preferences.</p>
 
 <section class="accinfo_cont">
     <h2>My Information</h2>
-    <p>Email: </p>
-    <p>Username: <%= @current_user.username %></p>
-    <p>Change Password</p>
 
+    <div class="info-section">
+        <span class="label">Username:</span>
+        <span class="info"><%= @current_user.username %></span>
+    </div>
+
+    <div class="button-section">
+        <a href="/change-info?field=username" class="acc-form-button">Change Username</a>
+    </div>
+
+    <div class="info-section">
+        <span class="label">Email:</span>
+        <span class="info"><%= @current_user.email %></span>
+    </div>
+
+    <div class="button-section">
+        <span class="acc-form-button">Change Email</span>
+    </div>
+
+    <div class="info-section">
+        <span class="label">Password:</span>
+        <span class="info"><%= '*' * @current_user.password.length %></span>
+    </div>
+
+    <div class="button-section">
+        <span class="acc-form-button">Change Password</span>
+    </div>
 </section>
+
 
 <section class="accinfo_cont">
     <h2>My Preferences</h2>
-    <p>Edit Preferences</p>
+    <div class="button-section">
+        <span class="acc-form-button">Edit Preferences</span>
+    </div>
 </section>
 
-<section class="accinfo_cont"> <!-- will be hidden later --> 
+<section class="accinfo_cont">
     <h2>Restaurants</h2>
-    <p>Add a Restaurant</p> 
+    <div class="button-section">
+        <span class="acc-form-button">Add a Restaurant</span>
+    </div>
 </section>
 
 <div class="form-container">
