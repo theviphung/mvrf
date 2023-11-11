@@ -142,3 +142,11 @@ p {
     cursor: pointer;
     text-decoration: none;
 }
+
+.dietary-preferences {
+    text-align: left;
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #1c3359
+}
