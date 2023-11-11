@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Open+Sans:wght@700&display=swap');
+
+.admin-login-form{
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #EEBD59;
+    border-color: #3B2822;
+    border-radius: 20px;
+    border: 2px solid;
+    align-items: center;
+    /* text-align: center; */
+}
+.admin-input-field{
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.admin-heading{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #3B2822;
+}
+
+.admin-login-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-login-button:hover {
+    background-color: #555;
+}
