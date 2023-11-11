@@ -5,7 +5,7 @@ class Restaurant < ApplicationRecord
 
     def self.search(search)
         if search
-            self.where("lower(name) LIKE ?", "%#{search.downcase}%")
+            self.where("lower(name) LIKE ?", "%#{search.downcase}%").or(self.where("lower(cuisine) LIKE ?", "%#{search.downcase}%")).or(self.where("lower(address) LIKE ?", "%#{search.downcase}%"))
         else
             @restaurants = Restaurant.all
         end
