@@ -66,3 +66,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+#Map API
+gem "geocoder"
+gem "mapkick-rb"
