@@ -10,7 +10,14 @@
     width: 1000px;
     height: 500px;
     margin: auto;
-    padding: 10px;
+}
+
+.image-gallery img {
+    display: block;
+    width: 1000px;
+    max-width: 996px;
+    height: 496px;
+    object-fit: cover;
 }
 
 .info-bar {

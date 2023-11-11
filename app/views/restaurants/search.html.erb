@@ -43,11 +43,7 @@
                 </div>
 
                 <div class="tags-cuisine">
-                    <ul class="tags">
-                        <li class="list-item">peanut free</li>
-                        <li class="list-item">, </li>
-                        <li class="list-item">vegan</li>
-                    </ul>
+                    <p class="tags"><%= restaurant.tags %></p>
 
                     <p class="cuisine">Cuisine: <%= restaurant.cuisine%></p>
                 </div>
@@ -64,7 +60,7 @@
                 <h1 class="view-name"><%= restaurant.name %></h1>
 
                 <div class="image-gallery">
-                    <p>Images go Here</p>
+                    <img src="<%= restaurant.image %>">
                 </div>
 
                 <div class="info-bar">
