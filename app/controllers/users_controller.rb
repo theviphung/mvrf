@@ -37,8 +37,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to my_account_path, success: "User information updated successfully."
     else
-      flash[:notice] = "Error modifying"
-      render 'change-info'
+      render 'change-info', success: "Error modifying"
     end
 
   end

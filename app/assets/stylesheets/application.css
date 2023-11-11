@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .flash-message {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #1c3359;
+ }
