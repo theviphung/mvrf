@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     get "my-account", to: "users#myaccount"
     get 'change-info', to: 'users#change_info', as: :change_info
     post '/modify_info', to: 'users#modify_info', as: :modify_info
+    get 'change-preferences', to: "users#change-preferences"
+    post "modify_preferences", to: "users#modify_preferences", as: :modify_preferences
 
 
     get '/admin-login', to: 'admins#new'

@@ -1,0 +1,50 @@
+<% stylesheet_link_tag('my-account_style') %>
+
+<% @current_user = User.find_by_id(session[:user_id]) %>
+
+<h2>Change Preferences</h2>
+
+<section class="new_accinfo_cont">
+
+  <div class="form-container">
+    <%= form_for :modify_preferences, url: modify_preferences_path, method: :post do |f| %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+
+      <%= f.check_box :gluten_intolerance, checked: @current_user.gluten_intolerance %>
+      <%= f.label :gluten_intolerance, 'Gluten Intolerance' %><br>
+
+      <%= f.check_box :vegan, checked: @current_user.vegan %>
+      <%= f.label :vegan, 'Vegan' %><br>
+
+      <%= f.check_box :vegetarian, checked: @current_user.vegetarian %>
+      <%= f.label :vegetarian, 'Vegetarian' %><br>
+
+      <%= f.check_box :nut_allergy, checked: @current_user.nut_allergy %>
+      <%= f.label :nut_allergy, 'Nut Allergy' %><br>
+
+      <%= f.check_box :fish_allergy, checked: @current_user.fish_allergy %>
+      <%= f.label :fish_allergy, 'Fish Allergy' %><br>
+
+      <%= f.check_box :egg_allergy, checked: @current_user.egg_allergy %>
+      <%= f.label :egg_allergy, 'Egg Allergy' %><br>
+
+      <%= f.check_box :soy_allergy, checked: @current_user.soy_allergy %>
+      <%= f.label :soy_allergy, 'Soy Allergy' %><br>
+
+      <%= f.check_box :dairy_allergy, checked: @current_user.dairy_allergy %>
+      <%= f.label :dairy_allergy, 'Dairy Allergy' %><br>
+
+      <%= f.check_box :kosher, checked: @current_user.kosher %>
+      <%= f.label :kosher, 'Kosher' %><br>
+
+      <%= f.check_box :halal, checked: @current_user.halal %>
+      <%= f.label :halal, 'Halal' %><br>
+
+      <%= f.submit "Submit", class: "form-button" %>
+    <% end %>
+  </div>
+
+</section>
+
+</body>
+</html>
