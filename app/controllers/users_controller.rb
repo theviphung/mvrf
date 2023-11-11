@@ -43,10 +43,35 @@ class UsersController < ApplicationController
 
   end
 
+  def modify_preferences
+    @user_id = params[:modify_preferences][:user_id]
+    @user = User.find(@user_id)
+
+    preferences_params.each do |preference, value|
+      @user.update_attribute(preference, value)
+    end
+
+    if @user.save
+      redirect_to my_account_path, success: "Dietary preferences updated successfully."
+    else
+      flash[:notice] = "Error updating dietary preferences."
+      render 'change-preferences'
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
+  end
+
+  def preferences_params
+    params.require(:modify_preferences).permit(
+      :gluten_intolerance, :vegan, :vegetarian,
+      :nut_allergy, :fish_and_shellfish_allergy,
+      :egg_allergy, :soy_allergy, :dairy_allergy,
+      :kosher, :halal
+    )
   end
 
 
