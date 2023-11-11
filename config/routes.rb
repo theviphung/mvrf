@@ -31,14 +31,9 @@ Rails.application.routes.draw do
     post '/logout' , to: 'sessions#destroy'
     get '/logout', to: 'sessions#logout'
 
-
-    # get 'admins/new'
-    # get 'admins/create'
-    # get 'admins/destroy'
-
     get '/admin-login', to: 'admins#new'
     post '/admin-login', to: 'admins#create'
-    get '/admin-logout', to: 'admins#destroy'
+    delete '/admin-logout', to: 'admins#destroy'
 
     get 'dashboards/index', to: 'dashboards#index', as: "admin_dashboard"
     get 'user_status', to: 'dashboards#user_status'

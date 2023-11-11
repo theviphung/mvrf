@@ -15,7 +15,8 @@ class AdminsController < ApplicationController
   end
 
   def destroy
-    session[:admin_id] = nil
+    admin_log_out
+    flash[:notice] = "Logged out succesfully"
     redirect_to '/admin-login'
   end
 end
