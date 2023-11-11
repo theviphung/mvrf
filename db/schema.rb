@@ -60,4 +60,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_11_194715) do
     t.boolean "halal"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.string "review"
+    t.datetime "created_at", null: false
+  end
+
 end
