@@ -24,35 +24,39 @@
 .search-options-bar {
     width: 95%;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
-
-.search-options-bar input[type=text] {
+#search {
     padding: 12px;
-    width: 100%;
+    width: 1350px;
     font-size: 20px;
-    margin: 0px;
+    margin: 5px;
+    position: relative;
 }
 
 .filters-button {
     background-color: #EEBD59;
-    width: 100%;
+    width: auto;
     color: black;
     padding: 14px;
+    margin: 5px;
     font-size: 20px;
     border: none;
-    margin: auto;
     cursor: pointer;
+    position: relative;
 }
 
 .sorting-button {
     background-color: #EEBD59;
-    width: 105%;
+    width: auto;
     color: black;
     padding: 14px;
     font-size: 20px;
     border: none;
-    margin: auto;
+    margin: 5px;
     cursor: pointer;
+    position: relative;
 }
 
 .sorting-button:hover {
