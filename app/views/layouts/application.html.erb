@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <%= render partial: "shared/navbar" %>
+    <% if admin_logged_in? %>
+      <%= render partial: "shared/admin_navbar" %>
+    <%else%>
+      <%= render partial: "shared/navbar" %>
+    <% end %>
   
     <div class = "container">
       <% flash.each do |key, message| %>

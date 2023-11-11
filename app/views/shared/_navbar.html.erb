@@ -18,7 +18,11 @@
             <% if @current_user %>
               <li><a href="/my-account" class="log-in-button"><%= "My Account" %></a></li>
             <% else %>
-              <li><a href="/login" class="log-in-button">Log In</a></li>
+                <% if current_page?(admin_login_path)%>
+                    <li><a href="/admin-login" class="log-in-button">Log In</a></li>
+                <%else%>
+                    <li><a href="/login" class="log-in-button">Log In</a></li>
+                <% end %>
             <% end %>
         </ul>
     </div>
