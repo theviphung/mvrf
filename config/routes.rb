@@ -7,18 +7,6 @@ Rails.application.routes.draw do
     get "search", to: "restaurants#search"
     get "index", to: "general#index"
 
-    get "login", to: "sessions#login"
-    get "my-account", to: "users#myaccount"
-    get "sign-up", to: "users#new"
-    post "sign-up", to: "users#create"
-    get "users/success", to: "users#success", as: "user_success"
-
-    get "users/failure", to: "users#failure", as: "user_failure"
-
-    get "sessions/success", to: "sessions#success", as: "session_success"
-
-    get "sessions/error", to: "sessions#error", as: "session_error"
-
     resources :restaurants
     get "restaurants/:id", to: "restaurants#show"
 
@@ -26,10 +14,20 @@ Rails.application.routes.draw do
     get "new-contact", to: "contacts#new"
 
     resources :users
-    get '/login', to: 'sessions#login'
-    post '/login', to: 'sessions#create'
-    post '/logout' , to: 'sessions#destroy'
-    get '/logout', to: 'sessions#logout'
+    get 'login', to: 'sessions#login'
+    post 'login', to: 'sessions#create'
+    post 'logout' , to: 'sessions#destroy'
+    get 'logout', to: 'sessions#logout'
+    get "sign-up", to: "users#new"
+    post "sign-up", to: "users#create"
+    get "users/success", to: "users#success", as: "user_success"
+    get "users/failure", to: "users#failure", as: "user_failure"
+    get "sessions/success", to: "sessions#success", as: "session_success"
+    get "sessions/error", to: "sessions#error", as: "session_error"
+    get "my-account", to: "users#myaccount"
+    get 'change-info', to: 'users#change_info', as: :change_info
+    post '/modify_info', to: 'users#modify_info', as: :modify_info
+
 
     get '/admin-login', to: 'admins#new'
     post '/admin-login', to: 'admins#create'

@@ -15,7 +15,7 @@
     </div>
 
     <div class="button-section">
-        <a href="/change-info?field=username" class="acc-form-button">Change Username</a>
+        <a href="<%= change_info_path(field: 'username', user_id: @current_user.id) %>" class="acc-form-button">Change Username</a>
     </div>
 
     <div class="info-section">
@@ -24,16 +24,13 @@
     </div>
 
     <div class="button-section">
-        <span class="acc-form-button">Change Email</span>
+        <a href="<%= change_info_path(field: 'email', user_id: @current_user.id) %>" class="acc-form-button">Change Email</a>
     </div>
 
     <div class="info-section">
         <span class="label">Password:</span>
         <span class="info"><%= '*' * @current_user.password.length %></span>
     </div>
-
-    <div class="button-section">
-        <span class="acc-form-button">Change Password</span>
     </div>
 </section>
 
@@ -41,7 +38,7 @@
 <section class="accinfo_cont">
     <h2>My Preferences</h2>
     <div class="button-section">
-        <span class="acc-form-button">Edit Preferences</span>
+        <a href="/change-info?field=preferences" class="acc-form-button">Change Preferences</a>
     </div>
 </section>
 

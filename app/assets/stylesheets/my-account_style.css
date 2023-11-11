@@ -30,8 +30,6 @@ p {
     padding: 1em 3em;
     margin: 2em auto;
     border-radius: 20px;
-    
-    
 }
 
 .accinfo_cont p {
@@ -100,6 +98,43 @@ p {
     width: 100%;
     font-size: 16px;
     background-color: #333;
+    color: white;
+    padding: 6px;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-input {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #3B2822;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.old-info-section {
+    padding: 10px;
+    text-align: center
+}
+
+.new_accinfo_cont {
+    background-color: #F9E9C8;
+    max-width: 30em;
+    padding: 1em 3em;
+    margin: 2em auto;
+    border-radius: 20px;
+}
+
+.notice {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    background-color: rgb(158, 46, 46)a8a;
     color: white;
     padding: 6px;
     border: 1px solid #3B2822;

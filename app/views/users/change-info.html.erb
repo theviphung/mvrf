@@ -1,0 +1,28 @@
+<% stylesheet_link_tag('my-account_style')%>  
+
+<% @current_user = User.find_by_id(session[:user_id]) %>
+
+<h2>Change <%= @field.capitalize %></h2>
+
+<section class="new_accinfo_cont">
+
+    <div class="old-info-section">
+        <span class="label">Current <%= @field %>:</span>
+        <span class="info"><%= @current_user.send(@field) %></span>
+    </div>
+
+
+    <div class="form-container">
+    <%= form_for :modify_info, url: modify_info_path, method: :post do |f| %>
+        <%= hidden_field_tag :field, @field %>
+        <%= hidden_field_tag :user_id, @current_user.id %>
+        <%= f.text_field :new_value, placeholder: @field.capitalize, class:"form-input" %><br>
+        <%= f.submit "Submit", class: "form-button" %>
+    <% end %>
+    </div>
+
+</section>
+
+
+</body>
+</html>
