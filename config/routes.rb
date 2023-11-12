@@ -37,11 +37,11 @@ Rails.application.routes.draw do
 
     #Admin dashboard
     get 'dashboards/index', to: 'dashboards#index', as: "admin_dashboard"
-    get 'user_status', to: 'dashboards#user_status', as: "user_status"
+    get 'user_status', to: 'prohibitions#index', as: "user_status"
 
     #ban user in User Status
-    post '/dashboards/ban/:id', to: 'dashboards#ban_user', as: "ban_user"
-    post '/dashboards/unban:id', to: 'dashboards#unban_user', as: "unban_user"
+    post '/prohibitions/ban/:id', to: 'prohibitions#ban_user', as: "ban_user"
+    post '/prohibitions/unban/:id', to: 'prohibitions#unban_user', as: "unban_user"
 
     get 'role_verification', to: 'dashboards#role_verification'
     get 'admin-restaurant_info', to: 'dashboards#restaurant_info'
