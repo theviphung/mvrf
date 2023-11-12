@@ -19,20 +19,55 @@
 
 .results {
     font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.filters-content p:hover,
+.sorting-methods p:hover {
+    background-color: #b9b7b4;
+    color: white;
+    cursor: pointer;
 }
 
 .search-options-bar {
-    width: 95%;
+    width: 100%;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
+
 #search {
     padding: 12px;
-    width: 1350px;
+    max-width: 600px;
+    width: 100%;
     font-size: 20px;
-    margin: 5px;
+    margin: 20px;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+}
+
+.form {
+    padding: 15px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .filters-button {
@@ -40,11 +75,13 @@
     width: auto;
     color: black;
     padding: 14px;
-    margin: 5px;
+    margin: 10px;
     font-size: 20px;
     border: none;
     cursor: pointer;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
 }
 
 .sorting-button {
@@ -54,9 +91,12 @@
     padding: 14px;
     font-size: 20px;
     border: none;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+    white-space: nowrap;
 }
 
 .sorting-button:hover {
@@ -70,7 +110,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    margin: 1px;
+    margin: 10px;
 }
 
 .filters-content {
@@ -78,6 +118,7 @@
     display: none;
     position: absolute;
     z-index: 1;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sorting-methods {
@@ -85,6 +126,7 @@
     display: none;
     position: absolute;
     z-index: 1;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .show {display:block}
@@ -96,4 +138,8 @@
     max-height: 750px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.map-1 {
+    height: 750px;
 }

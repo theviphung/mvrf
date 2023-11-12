@@ -1,0 +1,45 @@
+<h1>Restaurant Information</h1>
+
+<%= form_tag admin_restaurant_info_path, method: :get do%>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Restaurant's Name or Owner..." %>
+    <%= submit_tag "Search"%>
+<% end %>
+
+<% if @restaurants.present?%>
+    <table>
+        <tr>
+            <th>Restaurant Name</th>
+            <th>Owner</th>
+            <th>Dietary Restrictions</th>
+            <th>Opening Hours</th>
+            <th>Address</th>
+            <th>Description</th>
+        </tr>
+            <% @restaurants.each do |restaurant| %>
+                <tr>
+                    <td><%= restaurant.name%></td>
+                    <td><%= restaurant.owner%></td>
+                    <td>
+                        <% tags = []%>
+                        <% tags << "Gluten Intolerance" if restaurant.gluten_intolerance?%>
+                        <% tags << "Vegan" if restaurant.vegan?%>
+                        <% tags << "Vegetarian" if restaurant.vegetarian?%>
+                        <% tags << "Nut Allergy" if restaurant.nut_allergy?%>
+                        <% tags << "Fish Allergy" if restaurant.fish_allergy?%>
+                        <% tags << "Egg Allergy" if restaurant.egg_allergy?%>
+                        <% tags << "Soy Allergy" if restaurant.soy_allergy?%>
+                        <% tags << "Dairy Allergy" if restaurant.dairy_allergy?%>
+                        <% tags << "Kosher" if restaurant.kosher?%>
+                        <% tags << "Halal" if restaurant.halal?%>
+                        <%= tags.join(', ')%> 
+                    </td>
+                    <td><%= restaurant.hours%></td>
+                    <td><%= restaurant.address%></td>
+                    <td><%= restaurant.description%></td>
+                    <td><%=button_to "Edit"%></td>
+                </tr>
+            <% end %>
+</table>
+<%else%>
+    <p>No users found in Database.</p>
+<% end %>

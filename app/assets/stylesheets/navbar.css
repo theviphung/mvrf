@@ -43,6 +43,7 @@ body{
     font-weight: 500;
     text-decoration: none;
     margin-right: 40px;
+    white-space: nowrap;
 }
 
 .navbar li a::before{
@@ -73,6 +74,7 @@ body{
     font-weight: bold;
     padding: 10px 25px;
     border-radius: 30px;
+    white-space: nowrap;
 }
 
 .hamburger-menu{
