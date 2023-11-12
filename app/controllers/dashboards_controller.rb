@@ -21,4 +21,8 @@ class DashboardsController < ApplicationController
     redirect_to user_status_path
   end
 
+  def restaurant_info
+    @restaurants = Restaurant.all
+  end
+
 end

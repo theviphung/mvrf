@@ -1,1 +1,32 @@
 <h1>Restaurant Information</h1>
+
+<%= form_tag admin_restaurant_info_path, method: :get do%>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Restaurant's Name or Owner..." %>
+    <%= submit_tag "Search", :name => nil, :owner => nil%>
+<% end %>
+
+<% if @restaurants.present?%>
+    <table>
+        <tr>
+            <th>Restaurant Name</th>
+            <th>Owner</th>
+            <th>Cuisine Tag</th>
+            <th>Opening Hours</th>
+            <th>Address</th>
+            <th>Description</th>
+        </tr>
+            <% @restaurants.each do |restaurant| %>
+                <tr>
+                    <td><%= restaurant.name%></td>
+                    <td><%= restaurant.owner%></td>
+                    <td><%= "Cuisine Tag "%></td>
+                    <td><%= restaurant.hours%></td>
+                    <td><%= restaurant.address%></td>
+                    <td><%= restaurant.description%></td>
+                    <td><%=button_to "Edit"%></td>
+                </tr>
+            <% end %>
+</table>
+<%else%>
+    <p>No users found in Database.</p>
+<% end %>
