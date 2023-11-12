@@ -31,8 +31,7 @@
                         <% tags << "Dairy Allergy" if restaurant.dairy_allergy?%>
                         <% tags << "Kosher" if restaurant.kosher?%>
                         <% tags << "Halal" if restaurant.halal?%>
-                        <%= tags.join(', ')%>
-                        
+                        <%= tags.join(', ')%> 
                     </td>
                     <td><%= restaurant.hours%></td>
                     <td><%= restaurant.address%></td>

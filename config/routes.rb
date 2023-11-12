@@ -45,7 +45,7 @@ Rails.application.routes.draw do
     get '/prohibitions/search/:search_term', to: 'prohibitions#search', as: "search_user"
 
     get 'role_verification', to: 'dashboards#role_verification'
-    get 'admin-restaurant_info', to: 'dashboards#restaurant_info'
+    get 'admin-restaurant_info', to: 'info_edit#show'
     get 'admin-restaurant_review', to: 'dashboards#restaurant_review'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
