@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     #ban user in User Status
     post '/prohibitions/ban/:id', to: 'prohibitions#ban_user', as: "ban_user"
     post '/prohibitions/unban/:id', to: 'prohibitions#unban_user', as: "unban_user"
+    get '/prohibitions/search/:search_term', to: 'prohibitions#search', as: "search_user"
 
     get 'role_verification', to: 'dashboards#role_verification'
     get 'admin-restaurant_info', to: 'dashboards#restaurant_info'
