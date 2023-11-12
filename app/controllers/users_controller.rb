@@ -67,7 +67,7 @@ class UsersController < ApplicationController
   def preferences_params
     params.require(:modify_preferences).permit(
       :gluten_intolerance, :vegan, :vegetarian,
-      :nut_allergy, :fish_and_shellfish_allergy,
+      :nut_allergy, :fish_allergy,
       :egg_allergy, :soy_allergy, :dairy_allergy,
       :kosher, :halal
     )
