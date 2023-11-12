@@ -33,40 +33,51 @@
 
 <% @current_user = User.find_by_id(session[:user_id]) %>
 
-<div class="search-options-bar">
-    <!--- <input type="text" placeholder="Search..."> -->
-    <%= form_with url: "/search", method: :get do |form| %>
-        <%= form.text_field :search %>
-        <%= form.hidden_field :gluten_req, value: @current_user.gluten_intolerance %>
-        <%= form.hidden_field :vegan_req, value: @current_user.vegan %>
-        <%= form.hidden_field :vegetarian_req, value: @current_user.vegetarian %>
-        <%= form.hidden_field :nut_allergy_req, value: @current_user.nut_allergy %>
-        <%= form.hidden_field :fish_allergy_req, value: @current_user.fish_allergy %>
-        <%= form.hidden_field :egg_allergy_req, value: @current_user.egg_allergy %>
-        <%= form.hidden_field :soy_allergy_req, value: @current_user.soy_allergy %>
-        <%= form.hidden_field :dairy_allergy_req, value: @current_user.dairy_allergy %>
-        <%= form.hidden_field :kosher_req, value: @current_user.kosher %>
-        <%= form.hidden_field :halal_req, value: @current_user.halal %>
+<!--- <input type="text" placeholder="Search..."> -->
+<%= form_with url: "/search", method: :get do |form| %>
+    <%= form.text_field :search %>
+
+      <% if @current_user %>
+      <%= form.hidden_field :gluten_req, value: @current_user.gluten_intolerance %>
+      <%= form.hidden_field :vegan_req, value: @current_user.vegan %>
+      <%= form.hidden_field :vegetarian_req, value: @current_user.vegetarian %>
+      <%= form.hidden_field :nut_allergy_req, value: @current_user.nut_allergy %>
+      <%= form.hidden_field :fish_allergy_req, value: @current_user.fish_allergy %>
+      <%= form.hidden_field :egg_allergy_req, value: @current_user.egg_allergy %>
+      <%= form.hidden_field :soy_allergy_req, value: @current_user.soy_allergy %>
+      <%= form.hidden_field :dairy_allergy_req, value: @current_user.dairy_allergy %>
+      <%= form.hidden_field :kosher_req, value: @current_user.kosher %>
+      <%= form.hidden_field :halal_req, value: @current_user.halal %>
+  <% else %>
+      <%= form.hidden_field :gluten_req, value: false %>
+      <%= form.hidden_field :vegan_req, value: false %>
+      <%= form.hidden_field :vegetarian_req, value: false %>
+      <%= form.hidden_field :nut_allergy_req, value: false %>
+      <%= form.hidden_field :fish_allergy_req, value: false %>
+      <%= form.hidden_field :egg_allergy_req, value: false %>
+      <%= form.hidden_field :soy_allergy_req, value: false %>
+      <%= form.hidden_field :dairy_allergy_req, value: false %>
+      <%= form.hidden_field :kosher_req, value: false %>
+      <%= form.hidden_field :halal_req, value: false %>
+  <% end %>
+
         <!--- <%= form.submit "Search" %> -->
     <% end %>
 
-  <div class="dropdown">
+    <div class="dropdown">
     <button onclick="OpenFilters()" class="filters-button">Filters</button>
     <div id="filters" class="filters-content">
-      <p>test1</p>
-      <p>test2</p>
-      <p>test3</p>
+        <p>test1</p>
+        <p>test2</p>
+        <p>test3</p>
     </div>
-  </div>
-
-  <div class="dropdown">
+    <div class="dropdown">
     <button onclick="OpenSortBy()" class="sorting-button">Sort By</button>
     <div id="sorting" class="sorting-methods">
-      <p>test1</p>
-      <p>test2</p>
-      <p>test3</P>
+        <p>test1</p>
+        <p>test2</p>
+        <p>test3</P>
     </div>
-  </div>
 </div>
 <div class="locations">
   <h1>Top Restaurants Near You:</h1>
