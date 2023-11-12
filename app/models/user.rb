@@ -9,4 +9,12 @@ class User < ApplicationRecord
     def banned?
         banned
     end
+
+    def self.search(search)
+        if search
+            self.where("lower(username) LIKE ?", "%#{search.downcase}%")
+        else
+            @users = User.all
+        end
+    end
 end
