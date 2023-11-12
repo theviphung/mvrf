@@ -1,95 +1,168 @@
+<style>
+  .locations {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .locations ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .locations .location-item {
+    flex: 0 0 12%; /* Adjusted column width */
+    margin: 10px;
+    text-align: center;
+  }
+
+  .locations img {
+    width: 240px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
 <%= javascript_include_tag "dropdown.js", defer: true %>
 <%= javascript_include_tag "switch-views.js", defer: true %>
 
 <% @current_user = User.find_by_id(session[:user_id]) %>
 
 <div class="search-options-bar">
-    <!--- <input type="text" placeholder="Search..."> -->
-    <%= form_with url: "/search", method: :get do |form| %>
-        <%= form.text_field :search %>
-        <%= form.hidden_field :gluten_req, value: @current_user.gluten_intolerance %>
-        <%= form.hidden_field :vegan_req, value: @current_user.vegan %>
-        <%= form.hidden_field :vegetarian_req, value: @current_user.vegetarian %>
-        <%= form.hidden_field :nut_allergy_req, value: @current_user.nut_allergy %>
-        <%= form.hidden_field :fish_allergy_req, value: @current_user.fish_allergy %>
-        <%= form.hidden_field :egg_allergy_req, value: @current_user.egg_allergy %>
-        <%= form.hidden_field :soy_allergy_req, value: @current_user.soy_allergy %>
-        <%= form.hidden_field :dairy_allergy_req, value: @current_user.dairy_allergy %>
-        <%= form.hidden_field :kosher_req, value: @current_user.kosher %>
-        <%= form.hidden_field :halal_req, value: @current_user.halal %>
-        <!--- <%= form.submit "Search" %> -->
+  <%= form_with url: "/search", method: :get do |form| %>
+    <%= form.text_field :search %>
+  <% end %>
+
+  <div class="dropdown">
+    <button onclick="OpenFilters()" class="filters-button">Filters</button>
+    <div id="filters" class="filters-content">
+      <p>test1</p>
+      <p>test2</p>
+      <p>test3</p>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="OpenSortBy()" class="sorting-button">Sort By</button>
+    <div id="sorting" class="sorting-methods">
+      <p>test1</p>
+      <p>test2</p>
+      <p>test3</P>
+    </div>
+  </div>
+</div>
+
+<div class="locations">
+  <h1>Top Restaurants Near You:</h1>
+  <ul>
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Steve's+Pok%C3%A9+Bar/@49.277584,-122.9115997,19.86z/data=!3m1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x548679bee9cd6b29:0xcc7439254cced8f8!8m2!3d49.2777957!4d-122.9118286!16s%2Fg%2F11cp7qjrxr?entry=ttu" target="_blank">
+        <%= image_tag "search-images/poke.png"%>
+        <p>Steve Poke Bar</p>
+      </a>
+      <p>Rating: 4.8 </p>
+      <p>(638 reviews)</p>
+    </div>
+   <div class="location-item">
+      <a href="https://www.google.com/maps/place/Quesada+Burritos+%26+Tacos/@49.277614,-122.9116002,18.82z/data=!3m1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x548679bec22c4db3:0xe249b13252ccb70f!8m2!3d49.2778408!4d-122.9114345!16s%2Fg%2F11b5pjqr_m?entry=ttu" target="_blank">
+        <%= image_tag "search-images/burritos.png"%>
+        <p>Quesada Burritos Tacos</p>
+      </a>
+      <p>Rating: 3.9 </p>
+      <p>(336 reviews)</p>
+    </div>
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Uncle+Fatih's+Pizza+-+SFU/@49.278108,-122.9125523,17z/data=!3m2!4b1!5s0x548679bc11afc0a1:0xc6f61698732e3bf1!4m6!3m5!1s0x548679bea37cca8b:0xd7270caa53b8a287!8m2!3d49.2781045!4d-122.9099774!16s%2Fg%2F11c80851t1?entry=ttu" target="_blank">
+        <%= image_tag "search-images/pizza.png"%>
+        <p>Uncle Fatihs Pizza</p>
+      </a>
+      <p>Rating: 4.1 </p>
+      <p>(333 reviews)</p>
+    </div> 
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Starbucks/@49.278108,-122.9125523,17z/data=!4m6!3m5!1s0x548679bfe16aaaab:0x1e4f5af7b912732f!8m2!3d49.2781416!4d-122.9122678!16s%2Fg%2F11bwlb76wd?entry=ttu" target="_blank">
+        <%= image_tag "search-images/starbucks.png"%>
+        <p>Starbucks</p>
+      </a>
+      <p>Rating: 3.5 </p>
+      <p>(271 reviews)</p>
+    </div>
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Pho+99+SFU/@49.2778792,-122.9149683,17z/data=!3m2!4b1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x5486798d67f2f439:0x335471a8315fb75e!8m2!3d49.2778757!4d-122.9123934!16s%2Fg%2F11j15h_8h6?entry=ttu" target="_blank">
+        <%= image_tag "search-images/pho99.png"%>
+        <p>Pho 99 SFU</p>
+      </a>
+      <p>Rating: 4.3 </p>
+      <p>(270 reviews)</p>
+    </div>
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Renaissance+Coffee/@49.2786987,-122.9178839,18.82z/data=!4m6!3m5!1s0x548679bff0174595:0xa7a778ea0efdcdc2!8m2!3d49.2793994!4d-122.9156363!16s%2Fg%2F1thd6cbr?entry=ttu" target="_blank">
+        <%= image_tag "search-images/coffee.png"%>
+        <p>Renaissance Coffee</p>
+      </a>
+      <p>Rating: 4.1 </p>
+      <p>(177 reviews)</p>
+    </div>
+    <div class="location-item">
+      <a href="https://www.google.com/maps/place/Japarrito/@49.2778353,-122.9117616,20.39z/data=!3m1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x548679beeb22f875:0xc0a7d84afd27370b!8m2!3d49.2780824!4d-122.9119066!16s%2Fg%2F1vg_ck9v?entry=ttu" target="_blank">
+        <%= image_tag "search-images/japarrito.png"%>
+        <p>Japarrito</p>
+      </a>
+      <p>Rating: 3.7 </p>
+      <p>(125 reviews)</p>
+    </div>
+    
+    <!-- Repeat for other locations -->
+    <!-- ... -->
+  </ul>
+</div>
+
+<div class="main-content">
+  <div class="sidebar">
+    <h2 class="results">Results</h2>
+
+    <% @restaurants.each do |restaurant| %>
+      <button onclick="SwitchRestaurantView(<%= restaurant.id %>)" class="sidebar-element">
+        <p class="restaurant-name"><%= restaurant.name %></p>
+        <div class="address-ratings">
+          <p class="address"><%= restaurant.address %></p>
+          <p class="ratings"> <%= restaurant.rating%> </p>
+        </div>
+        <div class="tags-cuisine">
+          <p class="tags"><%= restaurant.tags %></p>
+          <p class="cuisine">Cuisine: <%= restaurant.cuisine%></p>
+        </div>
+      </button>
+    <% end %>
+  </div>
+ 
+  <div class="large-view">
+    <% @restaurants.each do |restaurant| %>
+      <div id="<%= restaurant.id %>" class="restaurant-view">
+        <h1 class="view-name"><%= restaurant.name %></h1>
+        <div class="image-gallery">
+          <img src="<%= restaurant.image %>">
+        </div>
+        <div class="info-bar">
+          <p class="view-address"><%= restaurant.address %></p>
+          <p class="view-rating">Rating: <%= restaurant.rating %></p>
+          <P class="view-owner">Owner: <%= restaurant.owner %></p>
+          <p class="view-cuisine">Cuisine: <%= restaurant.cuisine %></p><br>
+          <p class="view-hours">Hours: <%= restaurant.hours %></p>
+        </div>
+        <div class="description-div">
+          <P class="description"><%= restaurant.description %></p>
+        </div>
+      </div>
     <% end %>
 
-    <div class="dropdown">
-        <button onclick="OpenFilters()" class="filters-button">Filters</button>
-        <div id="filters" class="filters-content">
-            <p>test1</p>
-            <p>test2</p>
-            <p>test3</p>
-        </div>
+    <div id="map" class="map-view show">
+      <%= js_map [{ latitude: 49.2781, longitude: -122.9199 }] %>
     </div>
-
-    <div class="dropdown">
-        <button onclick="OpenSortBy()" class="sorting-button">Sort By</button>
-        <div id="sorting" class="sorting-methods">
-            <p>test1</p>
-            <p>test2</p>
-            <p>test3</P>
-        </div>
-    </div>
-</div>
-<div class="main-content">
-    <div class="sidebar">
-        <h2 class="results">Results</h2>
-
-        <!--- somehow use embedded ruby for loop to display returned restaurants using the sidebar-element partial-->
-        <% @restaurants.each do |restaurant| %>
-            <button onclick="SwitchRestaurantView(<%= restaurant.id %>)" class="sidebar-element">
-                <p class="restaurant-name"><%= restaurant.name %></p>
-
-                <div class="address-ratings">
-                    <p class = "address"><%= restaurant.address %></p>
-                    <p class = "ratings"> <%= restaurant.rating%> </p>
-                </div>
-
-                <div class="tags-cuisine">
-                    <p class="tags"><%= restaurant.tags %></p>
-
-                    <p class="cuisine">Cuisine: <%= restaurant.cuisine%></p>
-                </div>
-            </button>
-        <% end %>
-        
-    </div>
-
-    <div class="large-view">
-        <!--- these two divs should completely overlap, and use javascript to show or hide one depending on whether a restaurant is selected or not -->
-        <% @restaurants.each do |restaurant| %>
-            <div id="<%= restaurant.id %>"class="restaurant-view">
-                <!--- use this one for the restaurant page -->
-                <h1 class="view-name"><%= restaurant.name %></h1>
-
-                <div class="image-gallery">
-                    <img src="<%= restaurant.image %>">
-                </div>
-
-                <div class="info-bar">
-                    <p class="view-address"><%= restaurant.address %></p>
-                    <p class="view-rating">Rating: <%= restaurant.rating %></p>
-                    <P class="view-owner">Owner: <%= restaurant.owner %></p>
-                    <p class="view-cuisine">Cuisine: <%= restaurant.cuisine %></p><br>
-                    <p class="view-hours">Hours: <%= restaurant.hours %></p>
-                </div>
-
-                <div class="description-div">
-                    <P class="description"><%= restaurant.description %></p>
-                </div>
-            </div>
-        <% end %>
-
-        <div id="map" class="map-view show">
-            <!--- use this one for the map view page -->
-            <%= js_map [{latitude: 37.7829, longitude: -122.4190}] %>
-        </div>
-    </div>
+  </div>
 </div>
