@@ -134,11 +134,10 @@
 .large-view {
     width: 75%;
     float: right;
-    height: 500px;
-    max-height: 500px;
+    height: 750px;
+    max-height: 750px;
     overflow-x: hidden;
     overflow-y: auto;
-    color: #FEFCF6;
 }
 
 .map-1 {
