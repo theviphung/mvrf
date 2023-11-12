@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
     has_many :reviews
 
+    def banned?
+        banned
+    end
 end

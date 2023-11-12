@@ -30,13 +30,19 @@ Rails.application.routes.draw do
     get 'change-preferences', to: "users#change-preferences"
     post "modify_preferences", to: "users#modify_preferences", as: :modify_preferences
 
-
+    #Admin Login
     get '/admin-login', to: 'admins#new'
     post '/admin-login', to: 'admins#create'
     delete '/admin-logout', to: 'admins#destroy'
 
+    #Admin dashboard
     get 'dashboards/index', to: 'dashboards#index', as: "admin_dashboard"
-    get 'user_status', to: 'dashboards#user_status'
+    get 'user_status', to: 'dashboards#user_status', as: "user_status"
+
+    #ban user in User Status
+    post '/dashboards/ban/:id', to: 'dashboards#ban_user', as: "ban_user"
+    post '/dashboards/unban:id', to: 'dashboards#unban_user', as: "unban_user"
+
     get 'role_verification', to: 'dashboards#role_verification'
     get 'admin-restaurant_info', to: 'dashboards#restaurant_info'
     get 'admin-restaurant_review', to: 'dashboards#restaurant_review'

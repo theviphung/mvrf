@@ -10,8 +10,12 @@
             <% @users.each do |user| %>
                 <tr>
                     <td><%= user.username%></td>
-                    <td><%= user.username%></td>
-                    <td><%= submit_tag "Ban"%></td>
+                    <td><%= user.banned? ? 'Banned' : 'Active' %></td>
+                    <% if user.banned? %>
+                        <td><%=button_to "Unban",unban_user_path(user), method: :post%></td>
+                    <% else %>
+                        <td><%=button_to "Ban",ban_user_path(user), method: :post%></td>
+                    <% end %>
                 </tr>
             <% end %>
 </table>
