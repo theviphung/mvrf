@@ -20,4 +20,46 @@ class Restaurant < ApplicationRecord
             @restaurants = Restaurant.all
         end
     end
+
+
+    #Check if Restaurants have which dietary preference
+    def gluten_intolerance?
+        gluten_intolerance
+    end
+
+    def vegan?
+        vegan
+    end
+
+    def vegetarian?
+        vegetarian
+    end
+
+    def nut_allergy?
+        nut_allergy
+    end
+
+    def fish_allergy?
+        fish_allergy
+    end
+
+    def egg_allergy?
+        egg_allergy
+    end
+
+    def soy_allergy?
+        soy_allergy
+    end
+
+    def dairy_allergy?
+        dairy_allergy
+    end
+
+    def kosher?
+        kosher
+    end
+
+    def halal?
+        halal
+    end
 end
