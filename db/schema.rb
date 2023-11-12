@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_11_202830) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_12_012820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_11_202830) do
     t.datetime "updated_at", null: false
     t.string "image"
     t.string "tags"
+    t.boolean "gluten_intolerance"
+    t.boolean "vegan"
+    t.boolean "vegetarian"
+    t.boolean "nut_allergy"
+    t.boolean "fish_allergy"
+    t.boolean "egg_allergy"
+    t.boolean "soy_allergy"
+    t.boolean "dairy_allergy"
+    t.boolean "kosher"
+    t.boolean "halal"
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,12 +70,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_11_202830) do
     t.boolean "dairy_allergy"
     t.boolean "kosher"
     t.boolean "halal"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.string "review"
-    t.datetime "created_at", null: false
   end
 
 end

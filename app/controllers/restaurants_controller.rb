@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
     def search
-        @restaurants = Restaurant.search(params[:search])
+        @restaurants = Restaurant.search(params[:search], params[:gluten_req])
     end
 
     def show
@@ -44,6 +44,9 @@ class RestaurantsController < ApplicationController
 
     private
         def restaurant_params
-            params.require(:restaurant).permit(:name, :owner, :address, :hours, :rating, :ratingsnum, :description, :cuisine, :image, :tags, :search)
+            params.require(:restaurant).permit(:name, :owner, :address, :hours, :rating, :ratingsnum, :description, :cuisine,
+            :image, :tags, :gluten_intolerance, :vegan, :vegetarian, :nut_allergy,
+            :fish_allergy, :egg_allergy, :soy_allergy, :dairy_allergy, :kosher,
+            :halal, :search, :gluten_req)
         end
 end

@@ -50,6 +50,56 @@
     </div>
 
     <div>
+        <%= form.label :gluten_intolerance%><br>
+        <%= form.check_box :gluten_intolerance%>
+    </div>
+
+    <div>
+        <%= form.label :vegan %><br>
+        <%= form.check_box :vegan %>
+    </div>
+
+    <div>
+        <%= form.label :vegetarian %><br>
+        <%= form.check_box :vegetarian %>
+    </div>
+
+    <div>
+        <%= form.label :nut_allergy %><br>
+        <%= form.check_box :nut_allergy %>
+    </div>
+
+    <div>
+        <%= form.label :fish_allergy %><br>
+        <%= form.check_box :fish_allergy%>
+    </div>
+
+    <div>
+        <%= form.label :egg_allergy %><br>
+        <%= form.check_box :egg_allergy %>
+    </div>
+
+    <div>
+        <%= form.label :soy_allergy %><br>
+        <%= form.check_box :soy_allergy %>
+    </div>
+
+    <div>
+        <%= form.label :dairy_allergy %><br>
+        <%= form.check_box :dairy_allergy %>
+    </div>
+
+    <div>
+        <%= form.label :kosher %><br>
+        <%= form.check_box :kosher%>
+    </div>
+
+    <div>
+        <%= form.label :halal %><br>
+        <%= form.check_box :halal %>
+    </div>
+
+    <div>
         <%= form.submit %>
     </div>
 <% end %>
