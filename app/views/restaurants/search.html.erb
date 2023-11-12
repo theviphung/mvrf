@@ -33,51 +33,64 @@
 
 <% @current_user = User.find_by_id(session[:user_id]) %>
 
+
 <!--- <input type="text" placeholder="Search..."> -->
-<%= form_with url: "/search", method: :get do |form| %>
-    <%= form.text_field :search %>
+<div class = "search-container-container">
+  <div class="search-container">
+    <%= form_with url: "/search", class: "form", method: :get do |form| %>
+      <%= form.text_field :search, placeholder: "Search..." %>
 
       <% if @current_user %>
-      <%= form.hidden_field :gluten_req, value: @current_user.gluten_intolerance %>
-      <%= form.hidden_field :vegan_req, value: @current_user.vegan %>
-      <%= form.hidden_field :vegetarian_req, value: @current_user.vegetarian %>
-      <%= form.hidden_field :nut_allergy_req, value: @current_user.nut_allergy %>
-      <%= form.hidden_field :fish_allergy_req, value: @current_user.fish_allergy %>
-      <%= form.hidden_field :egg_allergy_req, value: @current_user.egg_allergy %>
-      <%= form.hidden_field :soy_allergy_req, value: @current_user.soy_allergy %>
-      <%= form.hidden_field :dairy_allergy_req, value: @current_user.dairy_allergy %>
-      <%= form.hidden_field :kosher_req, value: @current_user.kosher %>
-      <%= form.hidden_field :halal_req, value: @current_user.halal %>
-  <% else %>
-      <%= form.hidden_field :gluten_req, value: false %>
-      <%= form.hidden_field :vegan_req, value: false %>
-      <%= form.hidden_field :vegetarian_req, value: false %>
-      <%= form.hidden_field :nut_allergy_req, value: false %>
-      <%= form.hidden_field :fish_allergy_req, value: false %>
-      <%= form.hidden_field :egg_allergy_req, value: false %>
-      <%= form.hidden_field :soy_allergy_req, value: false %>
-      <%= form.hidden_field :dairy_allergy_req, value: false %>
-      <%= form.hidden_field :kosher_req, value: false %>
-      <%= form.hidden_field :halal_req, value: false %>
-  <% end %>
+        <%= form.hidden_field :gluten_req, value: @current_user.gluten_intolerance %>
+        <%= form.hidden_field :vegan_req, value: @current_user.vegan %>
+        <%= form.hidden_field :vegetarian_req, value: @current_user.vegetarian %>
+        <%= form.hidden_field :nut_allergy_req, value: @current_user.nut_allergy %>
+        <%= form.hidden_field :fish_allergy_req, value: @current_user.fish_allergy %>
+        <%= form.hidden_field :egg_allergy_req, value: @current_user.egg_allergy %>
+        <%= form.hidden_field :soy_allergy_req, value: @current_user.soy_allergy %>
+        <%= form.hidden_field :dairy_allergy_req, value: @current_user.dairy_allergy %>
+        <%= form.hidden_field :kosher_req, value: @current_user.kosher %>
+        <%= form.hidden_field :halal_req, value: @current_user.halal %>
+      <% else %>
+        <%= form.hidden_field :gluten_req, value: false %>
+        <%= form.hidden_field :vegan_req, value: false %>
+        <%= form.hidden_field :vegetarian_req, value: false %>
+        <%= form.hidden_field :nut_allergy_req, value: false %>
+        <%= form.hidden_field :fish_allergy_req, value: false %>
+        <%= form.hidden_field :egg_allergy_req, value: false %>
+        <%= form.hidden_field :soy_allergy_req, value: false %>
+        <%= form.hidden_field :dairy_allergy_req, value: false %>
+        <%= form.hidden_field :kosher_req, value: false %>
+        <%= form.hidden_field :halal_req, value: false %>
+      <% end %>
 
-        <!--- <%= form.submit "Search" %> -->
+      <!--- <%= form.submit "Search" %> -->
     <% end %>
 
-    <div class="dropdown">
-    <button onclick="OpenFilters()" class="filters-button">Filters</button>
-    <div id="filters" class="filters-content">
-        <p>test1</p>
-        <p>test2</p>
-        <p>test3</p>
+      <div class="dropdown">
+      <button onclick="OpenFilters()" class="filters-button">Filters</button>
+      <div id="filters" class="filters-content">
+        <p>Open Now</p>
+        <p>Price ($)</p>
+        <p>Price ($$)</p>
+        <p>Price ($$$)</p>
+      </div>
     </div>
+
     <div class="dropdown">
-    <button onclick="OpenSortBy()" class="sorting-button">Sort By</button>
-    <div id="sorting" class="sorting-methods">
-        <p>test1</p>
-        <p>test2</p>
-        <p>test3</P>
+      <button onclick="OpenSortBy()" class="sorting-button">Sort By</button>
+      <div id="sorting" class="sorting-methods">
+        <p>A-Z</p>
+        <p>Proximity</p>
+        <p>Ratings (highest to lowest)</p>
+      </div>
     </div>
+
+  </div>
+</div>
+
+
+
 </div>
 <div class="locations">
   <h1>Top Restaurants Near You:</h1>
@@ -85,7 +98,7 @@
     <div class="location-item">
       <a href="https://www.google.com/maps/place/Steve's+Pok%C3%A9+Bar/@49.277584,-122.9115997,19.86z/data=!3m1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x548679bee9cd6b29:0xcc7439254cced8f8!8m2!3d49.2777957!4d-122.9118286!16s%2Fg%2F11cp7qjrxr?entry=ttu" target="_blank">
         <%= image_tag "search-images/poke.png"%>
-        <p>Steve Poke Bar</p>
+        <p>Steve's Poke Bar</p>
       </a>
       <p>Rating: 4.8 </p>
       <p>(638 reviews)</p>
@@ -94,7 +107,7 @@
    <div class="location-item">
       <a href="https://www.google.com/maps/place/Quesada+Burritos+%26+Tacos/@49.277614,-122.9116002,18.82z/data=!3m1!5s0x548679bee9f6859b:0x9760b0bad355a92e!4m6!3m5!1s0x548679bec22c4db3:0xe249b13252ccb70f!8m2!3d49.2778408!4d-122.9114345!16s%2Fg%2F11b5pjqr_m?entry=ttu" target="_blank">
         <%= image_tag "search-images/burritos.png"%>
-        <p>Quesada Burritos Tacos</p>
+        <p>Quesada Burritos & Tacos</p>
       </a>
       <p>Rating: 3.9 </p>
       <p>(336 reviews)</p>
@@ -102,7 +115,7 @@
     <div class="location-item">
       <a href="https://www.google.com/maps/place/Uncle+Fatih's+Pizza+-+SFU/@49.278108,-122.9125523,17z/data=!3m2!4b1!5s0x548679bc11afc0a1:0xc6f61698732e3bf1!4m6!3m5!1s0x548679bea37cca8b:0xd7270caa53b8a287!8m2!3d49.2781045!4d-122.9099774!16s%2Fg%2F11c80851t1?entry=ttu" target="_blank">
         <%= image_tag "search-images/pizza.png"%>
-        <p>Uncle Fatihs Pizza</p>
+        <p>Uncle Fatih's Pizza</p>
       </a>
       <p>Rating: 4.1 </p>
       <p>(333 reviews)</p>
